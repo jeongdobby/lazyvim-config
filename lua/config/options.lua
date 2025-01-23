@@ -25,3 +25,4 @@ end
 
 vim.opt.cscopeverbose = true
 
+vim.opt.clipboard = vim.env.SSH_TTY and "unnamedplus" or "unnamedplus"
