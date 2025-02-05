@@ -25,6 +25,8 @@ keymap("n", "<F4>", ":bn<CR>", opts)
 -- disable search highligthing
 keymap("n", "<F12>", ":nohlsearch<CR>", opts)
 
+keymap("n", "<C-F2>", ":put =strftime('%Y-%m-%d %H:%M:%S')<CR>", opts)
+
 -- move lines
 keymap("n", "<F8>", ":m .+1<CR>==", opts)
 keymap("n", "<F7>", ":m .-2<CR>==", opts)
