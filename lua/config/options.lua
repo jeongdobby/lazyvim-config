@@ -4,4 +4,6 @@
 
 vim.opt.clipboard = vim.env.SSH_TTY and "unnamedplus" or "unnamedplus"
 vim.opt.relativenumber = false -- Relative line numbers
-vim.opt.shiftwidth = 8 -- Size of an indent
+vim.opt.shiftwidth = 4 -- Size of an indent
+vim.opt.tabstop = 4 -- Size of an indent
+vim.opt.expandtab = false -- Use spaces instead of tabs
