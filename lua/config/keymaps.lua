@@ -67,3 +67,17 @@ keymap("n", "<C-@><C-@>i", ":vert scs find i <C-R>=expand(“<cword>”)<CR><CR>
 keymap("n", "<C-@><C-@>d", ":vert scs find d <C-R>=expand(“<cword>”)<CR><CR>", opts)
 
 
+-- 현재 커서 위치의 단어를 `ltag`로 검색하고 `lwindow`를 열기
+vim.keymap.set("n", "<F9>", function()
+  local word = vim.fn.expand("<cword>")  -- 현재 커서가 있는 단어 가져오기
+  vim.cmd("normal! m6")                  -- 이전 위치 저장 (Ctrl + t를 위해)
+  vim.cmd("ltag " .. word)                -- `ltag` 실행
+  vim.cmd("pop")
+  vim.cmd("lopen")                        -- location list 창 열기
+end, { noremap = true, silent = true })
+
+-- Ctrl + t를 눌렀을 때 이전 위치로 돌아가기
+vim.keymap.set("n", "<F10>", function()
+  vim.cmd("normal! `6")                   -- 이전 위치로 돌아가기
+end, { noremap = true, silent = true })
+

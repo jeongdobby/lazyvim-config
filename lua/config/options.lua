@@ -7,3 +7,6 @@ vim.opt.relativenumber = false -- Relative line numbers
 vim.opt.shiftwidth = 4 -- Size of an indent
 vim.opt.tabstop = 4 -- Size of an indent
 vim.opt.expandtab = false -- Use spaces instead of tabs
+
+vim.o.tags = "./tags,tags,../tags,../../tags,../../../tags"
+
